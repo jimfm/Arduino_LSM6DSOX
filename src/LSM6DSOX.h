@@ -45,7 +45,8 @@ class LSM6DSOXClass {
     int readTemperatureFloat(float& temperature_deg);
     int temperatureAvailable();
 
-  private:
+  // Making these public for config changes to IMU
+  public:
     int readRegister(uint8_t address);
     int readRegisters(uint8_t address, uint8_t* data, size_t length);
     int writeRegister(uint8_t address, uint8_t value);
